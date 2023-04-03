@@ -1,0 +1,9 @@
+{
+    "name":"APIPlaySpace",
+    "profile":"development",
+    "web":{
+        "rewrites":{
+            "enable":true
+        }
+    }
+}

@@ -1,0 +1,8 @@
+{
+    "profile":"development",
+    "web":{
+        "rewrites":{
+            "enable":true
+        }
+    }
+}
