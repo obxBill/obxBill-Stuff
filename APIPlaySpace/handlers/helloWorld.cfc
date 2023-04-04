@@ -39,7 +39,7 @@ component{
 	 * index
 	 */
 	function index( event, rc, prc ){
-			msg = "Hey you, have an awesome day and yet another!";
+			msg = "Hey you, have an awesome day and yet another! - Test for source diff";
 		    messageBox.info( greeterService.sayHello(msg) );
     		event.setView( "helloWorld/index" );
 	}
@@ -52,7 +52,7 @@ component{
 	}
 
 	/**
-	 * edit
+	 * edit another diff test
 	 */
 	function edit( event, rc, prc ){
 		event.setView( "helloWorld/edit" );
