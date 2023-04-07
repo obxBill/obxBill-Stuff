@@ -4,25 +4,21 @@
 Options(s):
     <select name="api" onchange="submit();">   
         <option value="">&nbsp;-- Please Choose --&nbsp;</option>
-        <cfloop collection="#prc.stDnDdata#" item="item">
-            <option value="#prc.stDnDdata[item]#" <cfif prc.stDnDdata[item] eq rc.api>selected</cfif>>#ucase(left(item,1))&removeChars(item,1,1)#</option>
+        <cfloop array="#structkeyArray(prc.stDnDdata)#" index="key">
+            <option value="#prc.stDnDdata[key]#" <cfif compare(prc.stDnDdata[key],rc.api) eq 0>selected</cfif> >#Ucase(key)#</option>
         </cfloop>
     </select>
 
     <select name="api2" onchange="submit();">
         <option value="">&nbsp;-- Please Choose --&nbsp;</option>
         <cfif structKeyExists(prc, 'stDnDresults')>
-        <cfloop collection="#prc.stDnDresults#" item="item">
-            <!---<option value="#prc.stDnDresults[item]#" <cfif prc.stDnDresults[item] eq rc.api>selected</cfif>>#ucase(left(item,1))&removeChars(item,1,1)#</option>
-       ---> </cfloop>    
+            <cfloop array="#prc.stDnDresults.results#" index="item">
+                    <option value="#item.url#" <cfif compare(item.url,rc.api2) eq 0>selected</cfif> >#item.name#</option>
+            </cfloop> 
         </cfif>
     </select>
     </form>
-    <cfif structKeyExists(prc, 'stDnDresults')>
-     <cfloop collection="#prc.stDnDresults#" item="item">
-     
-        #writedump(prc.stDnDresults[item])#
-   
-     </cfloop>
-    </cfif>
+    <cfscript>
+        if (structkeyexists(prc,'stDnDresults2')) writedump(prc.stDnDresults2);
+    </cfscript>
 </cfoutput>
