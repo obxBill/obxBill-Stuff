@@ -6,7 +6,7 @@ Options(s):
     <select name="api" onchange="submit();">   
         <option value="">&nbsp;-- Please Choose --&nbsp;</option>
         <cfloop collection="#prc.stData#" item="item">
-            <option value="#prc.stData[item]#" <cfif prc.stData[item] eq rc.api>selected</cfif>>#ucase(left(item,1))&removeChars(item,1,1)#</option>
+            <option value="#prc.stData[item]#" <cfif prc.stData[item] eq rc.api>selected</cfif> >#ucase(left(item,1))&removeChars(item,1,1)#</option>
         </cfloop>
     </select>
     </form>
