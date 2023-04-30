@@ -1,0 +1,9 @@
+{
+    "name":"APIPlaceSpace",
+    "profile":"development",
+    "web":{
+        "rewrites":{
+            "enable":true
+        }
+    }
+}
