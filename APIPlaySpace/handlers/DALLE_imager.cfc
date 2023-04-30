@@ -37,15 +37,19 @@ component{
 			
 			event.paramValue( "api", "");
 			prc.apikey = 'Bearer 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';
-			
+			prc.msg = "";
 			if (structkeyexists(rc,'prompt')) {	
-				prc.package = {"prompt": rc.prompt,"n": 1,"size": "1024x1024"}
+				if (len(rc.imgCount) && val(rc.imgCount) <= 5) {
+				prc.package = {"prompt": rc.prompt,"n": val(rc.imgCount),"size": "1024x1024"}
 				prc.stData = deserializeJSON(DALLEservice.getData(
 					api='https://api.openai.com/v1/images/generations',
 					mtd='POST',
 					package=serializeJSON(prc.package),
 					apiKey=prc.apiKey
 				));
+				} else {
+					prc.msg = "Image count must be at least 1 and less than 5";
+				}	
 			}
 
 			event.setView( "DALLE_imager/index" );
