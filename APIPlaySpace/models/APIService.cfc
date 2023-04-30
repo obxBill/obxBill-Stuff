@@ -17,10 +17,16 @@ component singleton accessors="true"{
 	/**
 	 * getData
 	 */
-	function getData(required string api, string mtd='get'){
+	function getData(required string api, string mtd='get', string package='', string apiKey=''){
 
-	http url='#arguments.api#' method='#arguments.mtd#' result='apidata';
-	return variables.apidata.filecontent;
+		http url=arguments.api method=arguments.mtd result='apidata' {
+ 			if (len(arguments.apiKey)) httpparam type='header' name='Authorization' value=arguments.apiKey;
+			if (len(arguments.package)) {
+				httpparam type='body' value=arguments.package; 
+				httpparam type='header' name='Content-Type' value='application/json';
+ 			}
+		}
+		return variables.apidata.filecontent;
 	}
 
 
