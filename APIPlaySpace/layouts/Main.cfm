@@ -19,7 +19,7 @@
 	</style>
 
 	<!--- Title --->
-	<title>Welcome to Coldbox!</title>
+	<title>OBX API PlaySpace - Built w/ColdBox</title>
 </head>
 <body
 	data-spy="scroll"
