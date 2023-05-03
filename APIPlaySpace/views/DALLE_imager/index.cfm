@@ -5,9 +5,11 @@
 
     <form method='post' action='#event.buildLink('DALLE_imager')#'>
         <div class="row mb-3">
-            <label for="prompt" class="col-sm-2 col-form-label">Image Generator Prompt:</label>
             <div class="col-sm-10">
-            <textarea class="form-control" id="prompt" name="prompt"><cfif structkeyexists(rc,"prompt")>#rc.prompt#</cfif></textarea>  
+                <div class="form-floating">
+                    <textarea class="form-control" id="prompt" name="prompt"><cfif structkeyexists(rc,"prompt")>#rc.prompt#</cfif></textarea>  
+                    <label for="prompt">Image Generator Prompt</label>
+                </div>
             </div>
          </div>
          <div class="row mb-3">  
@@ -18,7 +20,7 @@
          </div>   
         <div class="row mb-3">
             <div class="col-sm-10 offset-sm-2">
-                 <button type="submit" class="btn btn-dark">Submit</button>
+                 <button type="submit" class="btn btn-primary">Submit</button>
             </div>
         </div>       
      </form>
@@ -37,3 +39,6 @@
         </cfif>
     </cfoutput>
 </div>
+
+
+<cfinclude template="test.html">
