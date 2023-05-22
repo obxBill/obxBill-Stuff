@@ -41,6 +41,7 @@ try {
 
             //writedump(thisStruct);
         }
+        writedump(prc.stResults)
     }
 } catch (any x) {
     writedump(prc)

@@ -43,7 +43,7 @@ component {
 			invalidHTTPMethodHandler : "",
 			exceptionHandler         : "main.onException",
 			invalidEventHandler      : "",
-			customErrorTemplate      : "",
+			customErrorTemplate      : "/coldbox/system/exceptions/BugReport.cfm",
 			// Application Aspects
 			handlerCaching           : false,
 			eventCaching             : false,
