@@ -154,7 +154,7 @@
 			</div>
 		</nav>
 	</header>
-<!---#getInstance( 'messagebox@cbmessageBox').renderIt()#--->
+#getInstance( 'messagebox@cbmessageBox').renderIt()#
 	<!---Container And Views --->
 	<main class="flex-shrink-0">
 		#renderView()#
