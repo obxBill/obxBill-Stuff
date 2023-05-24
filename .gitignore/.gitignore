@@ -3,11 +3,12 @@
 settings.xml
 WEB-INF
 .env
+/coldbox/
+box.json
 
 # logs + tests
 logs/**
 tests/results/**
-/coldbox/
 
 # npm
 **/node_modules/*
