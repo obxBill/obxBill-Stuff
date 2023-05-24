@@ -23,8 +23,8 @@ component {
 	// The web server mapping to this application. Used for remote purposes or static purposes
 	COLDBOX_APP_MAPPING   = "";
 	//COLDBOX_APP_MAPPING   = '/web/coldbox-site/wwwroot/obxBill-Stuff/APIPlaySpace/';
-	//this.mappings[ '/coldbox' ] = '/home/obxbill/obxBill-Stuff/APIPlaySpace/coldbox/';
-	this.mappings[ '/coldbox' ] = '/web/coldbox-site/wwwroot/obxBill-Stuff/APIPlaySpace/coldbox/'
+	this.mappings[ '/coldbox' ] = '/home/obxbill/obxBill-Stuff/coldbox/';
+	//this.mappings[ '/coldbox' ] = '/web/coldbox-site/wwwroot/obxBill-Stuff/APIPlaySpace/coldbox/'
 	// COLDBOX PROPERTIES
 	COLDBOX_CONFIG_FILE   = "";
 	// COLDBOX APPLICATION KEY OVERRIDE
