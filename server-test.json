@@ -1,9 +1,0 @@
-{
-    "name":"test",
-    "profile":"development",
-    "web":{
-        "rewrites":{
-            "enable":true
-        }
-    }
-}
