@@ -2,13 +2,13 @@
 .DS_Store
 settings.xml
 WEB-INF
+server-APIPlaceSpace.json
 
 # Engines + Database + CBFS + Secrets
 .env
 .engine/**
 .cbfs/**
 build/.db/**
-server-APIPlaySpace.json
 
 # logs + tests
 logs/**
