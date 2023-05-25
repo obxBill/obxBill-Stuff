@@ -2,9 +2,12 @@
 .DS_Store
 settings.xml
 WEB-INF
+
+# Engines + Database + CBFS + Secrets
 .env
-/coldbox/
-box.json
+.engine/**
+.cbfs/**
+build/.db/**
 
 # logs + tests
 logs/**
@@ -16,4 +19,7 @@ npm-debug.log
 yarn-error.log
 
 ## Ignored Dependencies
-modules/**/apidocs/**
+modules/**
+apidocs/**
+testbox/**
+coldbox/**
