@@ -24,8 +24,8 @@ component {
 	COLDBOX_APP_MAPPING   = "";
 	//COLDBOX_APP_MAPPING   = '/web/coldbox-site/wwwroot/obxBill-Stuff/APIPlaySpace/';
 	this.mappings[ '/coldbox' ] = '/home/obxbill/obxBill-Stuff/coldbox/';
-	//this.mappings[ '/coldbox' ] = '/web/coldbox-site/wwwroot/coldbox/';	
-	this.mappings['/cbapp'] = COLDBOX_APP_ROOT_PATH;
+	this.mappings[ '/coldbox' ] = '/web/coldbox-site/wwwroot/coldbox/';	
+	//this.mappings['/cbapp'] = COLDBOX_APP_ROOT_PATH;
 	// COLDBOX PROPERTIES
 	COLDBOX_CONFIG_FILE   = "";
 	// COLDBOX APPLICATION KEY OVERRIDE
