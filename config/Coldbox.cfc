@@ -17,6 +17,7 @@ component {
 			// Application Setup
 			appName                  : getSystemSetting( "APPNAME", "Your app name here" ),
 			eventName                : "event",
+			appMapping             :"obxBill-Stuff",
 			// Development Settings
 			reinitPassword           : "",
 			reinitKey                : "fwreinit",
