@@ -22,7 +22,7 @@ component {
 	COLDBOX_APP_ROOT_PATH = getDirectoryFromPath( getCurrentTemplatePath() );
 	// The web server mapping to this application. Used for remote purposes or static purposes
 	//COLDBOX_APP_MAPPING   = "";
-	COLDBOX_APP_MAPPING   = '/wwwroot/obxBill-Stuff/';
+	COLDBOX_APP_MAPPING   = '/obxBill-Stuff/';
 	//this.mappings[ '/coldbox' ] = '/home/obxbill/obxBill-Stuff/coldbox/';
 	this.mappings[ '/coldbox' ] = '/web/coldbox-site/wwwroot/coldbox/';	
 	this.mappings['/obxBill-Stuff'] = COLDBOX_APP_ROOT_PATH;
