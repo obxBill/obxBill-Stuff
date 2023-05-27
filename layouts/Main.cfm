@@ -16,6 +16,21 @@
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
 	<style>
 		.text-blue { color:##379BC1; }
+
+			:root {
+			--bg-color: ##fff; /* Light mode background color */
+			--text-color: ##333; /* Light mode text color */
+			}
+
+			.dark-mode {
+			--bg-color: ##111; /* Dark mode background color */
+			--text-color: ##eee; /* Dark mode text color */
+			}
+
+			body {
+			background-color: var(--bg-color);
+			color: var(--text-color);
+			}
 	</style>
 
 	<!--- Title --->
@@ -26,7 +41,7 @@
 	data-target=".navbar"
 	data-offset="50"
 	style="padding-top: 60px"
-	class="d-flex flex-column h-100"
+	class="d-flex flex-column h-100 dark-mode"
 >
 	<!---Top NavBar --->
 	<header>
