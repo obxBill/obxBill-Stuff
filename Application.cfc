@@ -19,8 +19,8 @@ component {
 	};
 
 	// COLDBOX STATIC PROPERTY, DO NOT CHANGE UNLESS THIS IS NOT THE ROOT OF YOUR COLDBOX APP
-	//COLDBOX_APP_ROOT_PATH = getDirectoryFromPath( getCurrentTemplatePath() );
-	COLDBOX_APP_ROOT_PATH = expandPath( '/obxBill-Stuff' );
+	COLDBOX_APP_ROOT_PATH = getDirectoryFromPath( getCurrentTemplatePath() );
+	//COLDBOX_APP_ROOT_PATH = expandPath( '/obxBill-Stuff' );
 	// The web server mapping to this application. Used for remote purposes or static purposes
 	COLDBOX_APP_MAPPING   = "";
 	//this.mappings[ '/coldbox' ] = '/home/obxbill/obxBill-Stuff/coldbox/';

@@ -28,7 +28,8 @@ component {
 		} );
 
 		// Conventions based routing
-		route( ":handler/:action?" ).end();
+		//route( ":handler/:action?" ).end();
+		route( "/obxBill-Stuff/:handler/:action?" ).end();
 	}
 
 }
