@@ -19,7 +19,7 @@
 	</style>
 
 	<!--- Title --->
-	<title>OBX API PlaySpace - Built w/ColdBox</title>
+	<title>Bill's API PlaySpace - Built w/ColdBox</title>
 </head>
 <body
 	data-spy="scroll"
@@ -34,127 +34,11 @@
 			<div class="container-fluid">
 				<!---Brand --->
 				<a class="navbar-brand" href="#event.buildLink( 'main' )#">
-					<strong><i class="bi bi-bounding-box-circles"></i> Welcome</strong>
+					<h2><i class="bi bi-bounding-box-circles"></i> Bill's API PlaySpace</h2>
 				</a>
-
-				<!--- Mobile Toggler --->
-				<button
-					class="navbar-toggler"
-					type="button"
-					data-bs-toggle="collapse"
-					data-bs-target="##navbarSupportedContent"
-					aria-controls="navbarSupportedContent"
-					aria-expanded="false"
-					aria-label="Toggle navigation"
-				>
-					<span class="navbar-toggler-icon"></span>
-				</button>
-
-				<div class="collapse navbar-collapse" id="navbarSupportedContent">
-
-					<!---About --->
-					<ul class="navbar-nav ms-5 mb-2 mb-lg-0">
-						<li class="nav-item dropdown">
-							<a
-								class="nav-link dropdown-toggle"
-								href="##"
-								id="navbarDropdown"
-								role="button"
-								data-bs-toggle="dropdown"
-								aria-expanded="false"
-							>
-								About  <b class="caret"></b>
-							</a>
-							<ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-								<li>
-									<a href="https://coldbox.org" class="dropdown-item">
-										<i class="bi bi-journal-text"></i> Official Site
-									</a>
-								</li>
-								<li>
-									<a href="https://ortussolutions.atlassian.net/browse/COLDBOX" class="dropdown-item">
-										<i class="bi bi-bug"></i> Report a Bug
-									</a>
-								</li>
-								<li>
-									<a href="https://github.com/ColdBox/coldbox-platform/stargazers" class="dropdown-item">
-										<i class="bi bi-star"></i> Star Us
-									</a>
-								</li>
-								<li>
-									<hr class="dropdown-divider">
-								</li>
-								<li class="p-2">
-									<img class="rounded mx-auto block" width="150" src="includes/images/ColdBoxLogo2015_300.png" alt="logo"/>
-								</li>
-							</ul>
-						</li>
-					</ul>
-
-					<!--- Community --->
-					<ul class="navbar-nav mb-2 mb-lg-0">
-						<li class="nav-item dropdown">
-							<a
-								class="nav-link dropdown-toggle"
-								href="##"
-								id="navbarDropdown"
-								role="button"
-								data-bs-toggle="dropdown"
-								aria-expanded="false"
-							>
-								Learn  <b class="caret"></b>
-							</a>
-							<ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-								<li>
-									<a class="dropdown-item" href="https://coldbox.ortusbooks.com">Documentation</a>
-								</li>
-								<li>
-									<a class="dropdown-item" href="https://www.ortussolutions.com/blog">Blog</a>
-								</li>
-								<li>
-									<a class="dropdown-item" href="https://www.cfcasts.com/" target="_blank">Videos</a>
-								</li>
-								<li>
-									<a class="dropdown-item" href="https://www.ortussolutions.com/services/training" target="_blank">Courses</a>
-								</li>
-							</ul>
-						</li>
-					</ul>
-
-					<!--- Support --->
-					<ul class="navbar-nav mb-2 mb-lg-0">
-						<li class="nav-item dropdown">
-							<a
-								class="nav-link dropdown-toggle"
-								href="##"
-								id="navbarDropdown"
-								role="button"
-								data-bs-toggle="dropdown"
-								aria-expanded="false"
-							>
-								Support  <b class="caret"></b>
-							</a>
-							<ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-								<li>
-									<a class="dropdown-item" href="https://boxteam.herokuapp.com">Slack</a>
-								</li>
-								<li>
-									<a class="dropdown-item" href="https://groups.google.com/group/coldbox">Mailing List</a>
-								</li>
-								<li>
-									<a class="dropdown-item" href="https://www.coldbox.org/support/overview">Community Support</a>
-								</li>
-								<li>
-									<a class="dropdown-item" href="https://www.ortussolutions.com/services">Professional Support</a>
-								</li>
-							</ul>
-						</li>
-					</ul>
-				</div>
 			</div>
 		</nav>
 	</header>
-#getInstance( 'messagebox@cbmessageBox').renderIt()#
 	<!---Container And Views --->
 	<main class="flex-shrink-0">
 		#renderView()#
@@ -163,15 +47,6 @@
 	<!--- Footer --->
 	<footer class="w-100 bottom-0 position-fixed border-top py-3 mt-5 bg-light">
 		<div class="container">
-			<!--- <p class="float-end">
-				<a href="##" class="btn btn-info rounded-circle shadow" role="button">
-					<i class="bi bi-arrow-bar-up"></i> <span class="visually-hidden">Top</span>
-				</a>
-			</p>
-			<p>
-				<a href="https://github.com/ColdBox/coldbox-platform/stargazers">ColdBox Platform</a> is a copyright-trademark software by
-				<a href="https://www.ortussolutions.com">Ortus Solutions, Corp</a>
-			</p> --->
 		</div>
 	</footer>
 

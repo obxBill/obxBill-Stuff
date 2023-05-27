@@ -32,11 +32,14 @@ component{
 	}
 	*/
 	property name="SWservice" inject="APIService";
-	
+	property name='messageBox' inject='@cbmessagebox';
+
+
 	function index( event, rc, prc ) {
 			
 			event.paramValue( "api", "");
-
+			msg = "Choose from various categories to view Star Wars data"
+			messageBox.info( msg);
 			prc.stData = deserializeJSON(SWservice.getData('https://swapi.dev/api/'));
 			
 			if (len(rc.api)) prc.stResults = deserializeJSON(SWservice.getData(rc.api));

@@ -31,7 +31,8 @@ component{
 	function onInvalidHTTPMethod( event, rc, prc, faultAction, eventArguments ){
 	}
 	*/
-property name="NASAservice" inject="APIService";
+	property name="NASAservice" inject="APIService";
+	property name='messageBox' inject='@cbmessagebox';
 	/**
 	 * index
 	 */
@@ -40,6 +41,9 @@ property name="NASAservice" inject="APIService";
 		var apiURL = 'https://api.nasa.gov/planetary/apod?api_key=#apiKey#';
 
 		prc.stNASAdata = deserializeJSON(NASAservice.getData(apiURL));
+
+			msg = "<div>#dateformat(prc.stNASAdata.date,'long')#</div><div>#prc.stNASAdata.explanation#</div>";
+			messageBox.info( msg);
 
 		event.setView( "nasaIOD/index" );
 	}

@@ -1,15 +1,16 @@
 <cfoutput>
-<div class="container">
-<h1>StarWars Data Tool</h1>
-
-<form method='post' action='#event.buildLink('SWapi')#'>
-    <select class="form-control" name="api" onchange="submit();">   
-        <option value="">&nbsp;-- Please Choose --&nbsp;</option>
-        <cfloop collection="#prc.stData#" item="item">
-            <option value="#prc.stData[item]#" <cfif prc.stData[item] eq rc.api>selected</cfif> >#ucase(left(item,1))&removeChars(item,1,1)#</option>
-        </cfloop>
-    </select>
-    </form>
+<div class="container mb-5">
+    <div class="row py-5 gx-4">
+        <h2 class="text-blue">StarWars Data Tool</h2>
+        #cbMessagebox().renderIt()# 
+        <form method='post' action='#event.buildLink('SWapi')#'>
+            <select class="form-control" name="api" onchange="submit();">   
+                <option value="">&nbsp;-- Please Choose --&nbsp;</option>
+                <cfloop collection="#prc.stData#" item="item">
+                    <option value="#prc.stData[item]#" <cfif prc.stData[item] eq rc.api>selected</cfif> >#ucase(left(item,1))&removeChars(item,1,1)#</option>
+                </cfloop>
+            </select>
+            </form>
 
 <cfscript>
 titleCount = 0;
@@ -47,5 +48,6 @@ try {
     writedump(prc)
 }   
 </cfscript>
+</div>
 </div>
 </cfoutput>

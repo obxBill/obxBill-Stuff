@@ -1,6 +1,8 @@
-<div class="container-fluid">
-    <h1>DALL-e Imager</h1>
+<div class="container mb-5">
+    <div class="row py-5 gx-4">
+    <h2 class="text-blue">DALL-e Imaginer</h2>
     <cfoutput>
+     #cbMessagebox().renderIt()# 
     <p class="text-warning">#prc.msg#</p>
 
     <form method='post' action='#event.buildLink('DALLE_imager')#'>
@@ -38,6 +40,7 @@
                 </figure>
         </cfif>
     </cfoutput>
+    </div>
 </div>
 
 

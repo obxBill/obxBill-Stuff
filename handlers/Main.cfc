@@ -5,6 +5,15 @@ component extends="coldbox.system.EventHandler" {
 	 */
 	function index( event, rc, prc ) {
 		prc.welcomeMessage = "Welcome to ColdBox!";
+
+		
+		prc.arHandlerSets = [
+			{title='DALL-e Imaginer',handler='DALLE_imager'},
+			{title='NASA Image of the Day',handler='nasaIOD'},
+			{title='Star Wars Data Tool',handler='SWapi'},
+			{title='Dungeons and Dragons Tool',handler='DnD'}
+		]
+
 		event.setView( "main/index" );
 	}
 

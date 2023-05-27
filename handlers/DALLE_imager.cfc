@@ -32,7 +32,8 @@ component{
 	}
 	*/
 	property name="DALLEservice" inject="APIService";
-	
+	property name='messageBox' inject='@cbmessagebox';
+
 	function index( event, rc, prc ) {
 			
 			event.paramValue( "api", "");
@@ -51,6 +52,8 @@ component{
 					prc.msg = "Image count must be at least 1 and less than 5";
 				}	
 			}
+			msg = "Use DALL-e AI Image Generation Tool to create strange and interesting images from creative text prompts!"
+			messageBox.info( msg);
 
 			event.setView( "DALLE_imager/index" );
 		}
