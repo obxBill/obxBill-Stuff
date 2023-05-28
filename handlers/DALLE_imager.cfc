@@ -41,7 +41,7 @@ component{
 			prc.msg = "";
 			if (structkeyexists(rc,'prompt')) {	
 				if (len(rc.imgCount) && val(rc.imgCount) <= 5) {
-				prc.package = {"prompt": rc.prompt,"n": val(rc.imgCount),"size": "1024x1024"}
+				prc.package = {"prompt": rc.prompt,"n": val(rc.imgCount),"size": "256x256"}
 				prc.stData = deserializeJSON(DALLEservice.getData(
 					api='https://api.openai.com/v1/images/generations',
 					mtd='POST',
@@ -57,6 +57,4 @@ component{
 
 			event.setView( "DALLE_imager/index" );
 		}
-
-
 }
