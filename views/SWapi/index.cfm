@@ -32,6 +32,10 @@ try {
                         <div id="collapse#titleCount#" class="accordion-collapse collapse" aria-labelledby="heading#titleCount#" data-bs-parent="##accordionExample">
                         <div class="accordion-body">
                             #thisStruct.opening_crawl#
+                            <p>
+                                <div><strong>Director:</strong>  #thisStruct.director#</div>
+                                <div><strong>Release Date:</strong>  #Dateformat(thisStruct.release_date,'long')#</div>
+                            </p>
                         </div>
                         </div>
                     </div>')
