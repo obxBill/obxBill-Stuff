@@ -5,8 +5,8 @@
 	<!--- Metatags --->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-	<meta name="description" content="ColdBox Application Template">
-    <meta name="author" content="Ortus Solutions, Corp">
+	<meta name="description" content="API playspace to create and test various APIs found on the web">
+    <meta name="author" content="obxBill">
 
 	<!---Base URL --->
 	<base href="#event.getHTMLBaseURL()#" />
@@ -34,7 +34,7 @@
 	</style>
 
 	<!--- Title --->
-	<title>Bill's API PlaySpace - Built w/ColdBox</title>
+	<title>obxBill's API PlaySpace - Built w/ColdBox</title>
 </head>
 <body
 	data-spy="scroll"
@@ -49,7 +49,7 @@
 			<div class="container-fluid">
 				<!---Brand --->
 				<a class="navbar-brand" href="#event.buildLink( 'main' )#">
-					<h2><i class="bi bi-bounding-box-circles"></i> Bill's API PlaySpace</h2>
+					<h2><i class="bi bi-bounding-box-circles" title="back to main"></i> obxBill's API PlaySpace</h2>
 				</a>
 			</div>
 		</nav>
