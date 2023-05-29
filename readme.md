@@ -2,7 +2,7 @@
 
 A collection of webserivce API handlers build on ColdBox framework.  Purely a playspace to try new and interesting connectivity to a wealth of data out there...
 
-**NOTE:**  Best viewed with `Dark Mode for Web Contents enabled`
+**NOTE:**  Best viewed with `Auto Dark Mode for Web Contents enabled` in browser flags.
 
 ## APIs Available
 - Dall-E Imaginer
