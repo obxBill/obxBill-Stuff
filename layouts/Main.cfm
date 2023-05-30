@@ -41,7 +41,7 @@
 	data-target=".navbar"
 	data-offset="50"
 	style="padding-top: 60px"
-	class="d-flex flex-column h-100 dark-mode"
+	class="d-flex flex-column h-100"
 >
 	<!---Top NavBar --->
 	<header>
