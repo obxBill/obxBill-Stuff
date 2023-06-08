@@ -37,8 +37,7 @@ component{
 	 * index
 	 */
 	function index( event, rc, prc ){
-		var apiKey = 'PP2ui1FUsXzQgHC1on4mjZDZZvCm6HOtyVuj1kAH';
-		var apiURL = 'https://api.nasa.gov/planetary/apod?api_key=#apiKey#';
+		var apiURL = 'https://api.nasa.gov/planetary/apod?api_key='&getSystemSetting('API_NASA');
 
 		prc.stNASAdata = deserializeJSON(NASAservice.getData(apiURL));
 

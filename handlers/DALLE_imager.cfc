@@ -37,7 +37,6 @@ component{
 	function index( event, rc, prc ) {
 			
 			event.paramValue( "api", "");
-			prc.apikey = 'Bearer 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';
 			prc.msg = "";
 			if (structkeyexists(rc,'prompt')) {	
 				if (len(rc.imgCount) && val(rc.imgCount) <= 5) {
@@ -46,7 +45,7 @@ component{
 					api='https://api.openai.com/v1/images/generations',
 					mtd='POST',
 					package=serializeJSON(prc.package),
-					apiKey=prc.apiKey
+					apiKey=getSystemSetting('API_AI')
 				));
 				} else {
 					prc.msg = "Image count must be at least 1 and less than 5";
