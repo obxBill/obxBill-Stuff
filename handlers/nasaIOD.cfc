@@ -38,13 +38,16 @@ component{
 	 */
 	function index( event, rc, prc ){
 		var apiURL = 'https://api.nasa.gov/planetary/apod?api_key='&getSystemSetting('API_NASA');
-
-		prc.stNASAdata = deserializeJSON(NASAservice.getData(apiURL));
-
+		var resultNASA = NASAservice.getData(apiURL);
+		if (isJSON(resultNASA)) {
+			prc.stNASAdata = deserializeJSON(resultNASA);
 			msg = "<div>#dateformat(prc.stNASAdata.date,'long')#</div><div>#prc.stNASAdata.explanation#</div>";
+		} else {
+			msg = 'NASA image of the day retrieval unsuccessful';
+		}
+			
 			messageBox.info( msg);
-
-		event.setView( "nasaIOD/index" );
+			event.setView( "nasaIOD/index" );	
 	}
 
 

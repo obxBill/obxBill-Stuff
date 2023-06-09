@@ -6,7 +6,9 @@
          <div class="container-fluid">
             <div class="row justify-content-md-center">
                 <div class="col col-lg-10">
-                    <img class="img-fluid img-thumbnail" src="#prc.stNASAdata.hdurl#" height="500">
+                    <cfif structkeyexists(prc,'stNASAdata')>
+                        <img class="img-fluid img-thumbnail" src="#prc.stNASAdata.hdurl#" height="500">
+                    </cfif>
                 </div>
             </div>        
         </div>
