@@ -37,27 +37,26 @@ property name="DnDservice" inject="APIService";
 	/**
 	 * index
 	 */
-	function index( event, rc, prc ){
-		
+
+	function index(event, rc, prc) {
 		event.paramValue( "api", "");
 		event.paramValue( "api2", "");
-
 		var apiURL = 'https://www.dnd5eapi.co/';
 
-		prc.stDnDdata = deserializeJSON(DnDService.getData(apiURL&'api'));
+		prc.stDnDdata = deserializeJSON(DnDService.getData(apiURL & 'api'));
 
-		if (structKeyExists(rc,'api') and len(rc.api))  {
-			var apiFull1 = apiURL&rc.api;
+		if (len(rc.api)) {
+			var apiFull1 = apiURL & rc.api;
 			prc.stDnDresults = deserializeJSON(DnDService.getData(apiFull1));
 		}
-		if (structKeyExists(rc,'api2') and len(rc.api2)) {
-			var apiFull2 = apiURL&rc.api2;
+
+		if (len(rc.api2)) {
+			var apiFull2 = apiURL & rc.api2;
 			prc.stDnDresults2 = deserializeJSON(DnDService.getData(apiFull2));
 		}
-		event.setView( "DnD/index" );
+
+		event.setView("DnD/index");
 	}
-
-
 
 }
 

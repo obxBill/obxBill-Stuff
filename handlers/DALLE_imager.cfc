@@ -34,26 +34,32 @@ component{
 	property name="DALLEservice" inject="APIService";
 	property name='messageBox' inject='@cbmessagebox';
 
-	function index( event, rc, prc ) {
-			
-			event.paramValue( "api", "");
-			prc.msg = "";
-			if (structkeyexists(rc,'prompt')) {	
-				if (len(rc.imgCount) && val(rc.imgCount) <= 5) {
-				prc.package = {"prompt": rc.prompt,"n": val(rc.imgCount),"size": "256x256"}
-				prc.stData = deserializeJSON(DALLEservice.getData(
-					api='https://api.openai.com/v1/images/generations',
-					mtd='POST',
-					package=serializeJSON(prc.package),
-					apiKey=getSystemSetting('API_AI')
-				));
-				} else {
-					prc.msg = "Image count must be at least 1 and less than 5";
-				}	
-			}
-			msg = "Use DALL-e AI Image Generation Tool to create strange and interesting images from creative text prompts!"
-			messageBox.info( msg);
+	function index(event, rc, prc) {
+		prc.msg = "";
 
-			event.setView( "DALLE_imager/index" );
+		if (structkeyexists(rc,'prompt')) {
+			if (len(rc.imgCount) && val(rc.imgCount) <= 5) {
+				prc.package = {
+					"prompt": rc.prompt,
+					"n": val(rc.imgCount),
+					"size": "256x256"
+				};
+				prc.stData = deserializeJSON(
+					DALLEservice.getData(
+						api = 'https://api.openai.com/v1/images/generations',
+						mtd = 'POST',
+						package = serializeJSON(prc.package),
+						apiKey = getSystemSetting('API_AI')
+					)
+				);
+			} else {
+				prc.msg = "Image count must be at least 1 and less than 5";
+			}
 		}
+
+		event.setView("DALLE_imager/index");
+
+		msg = "Use DALL-e AI Image Generation Tool to create strange and interesting images from creative text prompts!";
+		messageBox.info(msg);
+	}
 }
