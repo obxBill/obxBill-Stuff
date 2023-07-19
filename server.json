@@ -1,4 +1,7 @@
 {
+    "app":{
+        "cfengine":"lucee"
+    },
     "name":"APIPlaySpace",
     "profile":"development",
     "web":{
