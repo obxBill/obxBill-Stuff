@@ -48,7 +48,7 @@
 		<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
 			<div class="container-fluid">
 				<!---Brand --->
-				<a class="navbar-brand" href="#event.buildLink( 'main' )#">
+				<a class="navbar-brand" href="main">
 					<h2><i class="bi bi-bounding-box-circles" title="back to main"></i> obxBill's API PlaySpace</h2>
 				</a>
 			</div>
