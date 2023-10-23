@@ -13,7 +13,7 @@
 				</p>
 				<div class="list-group">
 					<cfloop array="#prc.arHandlerSets#" index="sthandler">
-						<a href="#event.buildLink( sthandler.handler )#" class="list-group-item list-group-item-action d-flex gap-2 py-3" title="Run Event">
+						<a href="#sthandler.handler#" class="list-group-item list-group-item-action d-flex gap-2 py-3" title="Run Event">
 							<div class="rounded-circle flex-shrink-0 text-success px-1">
 								<i class="bi bi-play-btn" aria-hidden="true"></i> 
 							</div>

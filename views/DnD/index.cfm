@@ -2,7 +2,7 @@
 <div class="container mb-5">
     <div class="row py-5 gx-4">
         <h2 class="text-blue">Dungeon and Dragons Tool</h2>
-        <form method='post' action='#event.buildLink('DnD')#'>
+        <form method='post' action='DnD'>
         Options(s):
             <select class="form-control" name="api" onchange="submit();">   
                 <option value="">&nbsp;-- Please Choose --&nbsp;</option>

@@ -5,7 +5,7 @@
         #cbMessagebox().renderIt()# 
         <p class="text-warning">#prc.msg#</p>
 
-        <form method='post' action='#event.buildLink('DALLE_imager')#'>
+        <form method='post' action='DALLE_imager'>
             <div class="container">
                 <div class="row">
                     <div class="col-sm-12">
