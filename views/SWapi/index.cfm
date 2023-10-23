@@ -3,7 +3,7 @@
     <div class="row py-5 gx-4">
         <h2 class="text-blue">StarWars Data Tool</h2>
         #cbMessagebox().renderIt()# 
-        <form method='post' action='#event.buildLink('SWapi')#'>
+        <form method='post' action='SWapi'>
             <select class="form-control" name="api" onchange="submit();">   
                 <option value="">&nbsp;-- Please Choose --&nbsp;</option>
                 <cfloop collection="#prc.stData#" item="item">
