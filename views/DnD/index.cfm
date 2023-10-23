@@ -20,10 +20,22 @@
                 </cfif>
             </select>
             </form>
-            <div class="container-fluid">
-            <cfscript>
-                if (structkeyexists(prc,'stDnDresults2')) writedump(prc.stDnDresults2);
-            </cfscript>
+            <div class="container-fluid mt-3">
+                <cfif structKeyExists(prc, 'stDnDresults2')>
+                    <cfif structKeyExists(prc.stDndresults2, 'desc')>
+                        <cfif isArray(prc.stDndResults2.desc)>
+                            <ul class="list-group">
+                            <cfloop array="#prc.stDnDresults2.desc#" index="item">
+                                <li class="list-group-item list-group-item-info">#item#</li>
+                            </cfloop>
+                            </ul>
+                        <cfelse>
+                            <p>#prc.stDnDresults2.desc#</p>
+                        </cfif>
+                    <cfelse>
+                        <cfdump var="#prc.stDnDresults2#">    
+                    </cfif>                     
+                </cfif>
             </div>
     </div>
 </div>
