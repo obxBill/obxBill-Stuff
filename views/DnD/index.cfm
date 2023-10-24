@@ -23,15 +23,23 @@
             <div class="container-fluid mt-3">
                 <cfif structKeyExists(prc, 'stDnDresults2')>
                     <cfif structKeyExists(prc.stDndresults2, 'desc')>
-                        <cfif isArray(prc.stDndResults2.desc)>
-                            <ul class="list-group">
-                            <cfloop array="#prc.stDnDresults2.desc#" index="item">
-                                <li class="list-group-item list-group-item-info">#item#</li>
-                            </cfloop>
-                            </ul>
-                        <cfelse>
-                            <p>#prc.stDnDresults2.desc#</p>
-                        </cfif>
+                        <ul class="list-group">
+                            <cfif isArray(prc.stDndResults2.desc)>    
+                                <cfloop array="#prc.stDnDresults2.desc#" index="item">
+                                    <li class="list-group-item list-group-item-info">#item#</li>
+                                </cfloop>
+                            <cfelse>
+                                <li class="list-group-item list-group-item-info">#prc.stDnDresults2.desc#</li>
+                            </cfif>                            
+                        </ul>
+                    <cfelseif structKeyExists(prc.stDndresults2, 'feature')>
+                        <ul class="list-group">
+                            <cfif isArray(prc.stDndResults2.feature.desc)>    
+                                <cfloop array="#prc.stDnDresults2.feature.desc#" index="item">
+                                    <li class="list-group-item list-group-item-info">#item#</li>
+                                </cfloop>
+                            </cfif>                               
+                        </ul>
                     <cfelse>
                         <cfdump var="#prc.stDnDresults2#">    
                     </cfif>                     
