@@ -7,10 +7,10 @@
             <div class="row justify-content-md-center">
                 <div class="col col-lg-10">
                     <cfif structkeyexists(prc,'stNASAdata')>
-                        <cfif structKeyExists(prc.stNASAdata,'url')>
-                            <iframe src="#prc.stNASAdata.url#" width="100%" height="500"></iframe>
-                        <cfelseif structKeyExists(prc.stNASAdata,'hdurl')>
+                        <cfif structKeyExists(prc.stNASAdata,'hdurl')>
                             <img class="img-fluid img-thumbnail" src="#prc.stNASAdata.hdurl#" height="500"> 
+                        <cfelseif structKeyExists(prc.stNASAdata,'url')>
+                            <iframe src="#prc.stNASAdata.url#" width="100%" height="500"></iframe>
                         <cfelse>
                             <cfdump var="#prc.stNASAdata#"> 
                         </cfif>
