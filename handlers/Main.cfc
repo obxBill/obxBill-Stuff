@@ -11,7 +11,8 @@ component extends="coldbox.system.EventHandler" {
 			{title='DALL-e Imaginer',handler='DALLE_imager'},
 			{title='NASA Image of the Day',handler='nasaIOD'},
 			{title='Star Wars Data Tool',handler='SWapi'},
-			{title='Dungeons and Dragons Tool',handler='DnD'}
+			{title='Dungeons and Dragons Tool',handler='DnD'},
+			{title='Nekos Best Anime',handler='anime'}
 		]
 
 		event.setView( "main/index" );
