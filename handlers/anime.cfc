@@ -19,14 +19,17 @@ component extends="coldbox.system.EventHandler"{
 	 */
 	function index( event, rc, prc ){
 		event.paramValue( "api", "");
-		prc.stData = deserializeJSON(NAservice.getData('https://nekos.best/api/v2/neko'));
+		arSources = ['husbando','kitsune','neko','waifu'];
+		prc.source = arSources[randRange(1,arrayLen(arSources))];
+
+		prc.stData = deserializeJSON(NAservice.getData('https://nekos.best/api/v2/'&prc.source));
 		
 		for (thisItem in prc.stData.results){
 			prc.url = thisItem.url;
 			prc.artist = thisItem.artist_name;
 		}
 
-		msg = "ARTIST: "&prc.artist;
+		msg = "ARTIST: #prc.artist# ( #prc.source# )";
 		messageBox.info( msg);
 
 		event.setView( "anime/index" );
