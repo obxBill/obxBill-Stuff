@@ -9,7 +9,7 @@ A collection of webserivce API handlers build on ColdBox framework.  Purely a pl
 - NASA Image of the Day
 - StarWars Data Tool
 - Dungeon & Dragons Data Tool
-- Nexos Best Anime
+- Nekos Best Anime
 
 More to come!
 
