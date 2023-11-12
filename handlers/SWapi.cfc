@@ -13,6 +13,8 @@ component{
 	// REST Allowed HTTP Methods Ex: this.allowedMethods = {delete='POST,DELETE',index='GET'}
 	this.allowedMethods = {};
 
+	this.APIurl = 'https://swapi.dev/api/';
+
 	/**
 	IMPLICIT FUNCTIONS: Uncomment to use
 
@@ -34,17 +36,36 @@ component{
 	property name="SWservice" inject="APIService";
 	property name='messageBox' inject='@cbmessagebox';
 
-
 	function index( event, rc, prc ) {
 			
 			event.paramValue( "api", "");
 			msg = "Choose from various categories to view Star Wars data"
 			messageBox.info( msg);
-			prc.stData = deserializeJSON(SWservice.getData('https://swapi.dev/api/'));
+			prc.stData = deserializeJSON(SWservice.getData(this.APIurl));
 			
-			if (len(rc.api)) prc.stResults = deserializeJSON(SWservice.getData(rc.api));
+			if (len(rc.api)) {
+				prc.stResults = deserializeJSON(SWservice.getData(rc.api));
+			} 
+
+			prc.arOmit = ['created','edited','url'];
 
 			event.setView( "SWapi/index" );
 		}
 		
+	function person( person ) {
+
+		prc.data = deserializeJSON(SWservice.getData(person));
+
+		return prc.data;
+
+	}
+
+	function planet( homeworld ) {
+
+		prc.data = deserializeJSON(SWservice.getData(homeworld));
+		return prc.data;
+
+	}	
+
+
 }

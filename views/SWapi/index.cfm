@@ -10,13 +10,16 @@
                     <option value="#prc.stData[item]#" <cfif prc.stData[item] eq rc.api>selected</cfif> >#ucase(left(item,1))&removeChars(item,1,1)#</option>
                 </cfloop>
             </select>
-            </form>
+        </form>
 
+<div class="container-fluid p-3">
 <cfscript>
 titleCount = 0;
-try {
+//try {
     if (structKeyExists(prc, 'stResults')) {
+        counter = 0;
         for (thisStruct in prc.stResults.results) {
+            counter=counter+1;
 
             if (structkeyexists(thisStruct,'title')) {
  
@@ -40,18 +43,28 @@ try {
                         </div>
                     </div>')
 
+             } else {
+                if (counter mod 2 eq 0) {
+                    writeOutput('<div class="rounded-2 p-3 mb-3 bg-light border border-dark">');
                 } else {
-                    writeoutput("<div>"&thisStruct.name&"</div>");
-                }
-
-            //writedump(thisStruct);
+                    writeOutput('<div class="rounded-2 p-3 mb-3 bg-dark border border-dark">');
+                }    
+                
+                    for (thisElement in thisStruct){
+                        if (structKeyexists(thisStruct,thisElement) && isSimpleValue(thisStruct[thisElement]) && !arrayContainsNoCase(prc.arOmit,thisElement)) {
+                           writeoutput("<div><strong>#ucase(thisElement)#:</strong> #thisStruct[thisElement]#</div>");
+                       } 
+                    }
+                writeOutput("</div>");    
+            }
         }
-        writedump(prc.stResults)
     }
-} catch (any x) {
+    
+/*} catch (any x) {
     writedump(prc)
-}   
+} */  
 </cfscript>
+</div>
 </div>
 </div>
 </cfoutput>
