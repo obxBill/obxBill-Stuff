@@ -12,7 +12,8 @@ component extends="coldbox.system.EventHandler" {
 			{title='NASA Image of the Day',handler='nasaIOD'},
 			{title='Star Wars Data Tool',handler='SWapi'},
 			{title='Dungeons and Dragons Tool',handler='DnD'},
-			{title='Nekos Best Anime',handler='anime'}
+			{title='Nekos Best Anime',handler='anime'},
+			{title='Google Authenticator MFA',handler='googleMFA'}
 		]
 
 		event.setView( "main/index" );
