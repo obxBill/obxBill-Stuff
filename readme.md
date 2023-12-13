@@ -10,6 +10,7 @@ A collection of webserivce API handlers build on ColdBox framework.  Purely a pl
 - StarWars Data Tool
 - Dungeon & Dragons Data Tool
 - Nekos Best Anime
+- MFA via Google Authenticator
 
 More to come!
 
